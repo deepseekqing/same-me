@@ -1,11 +1,11 @@
-# qing-self
+# same-me
 
 > A scaffold that gives a DSH agent or role **layered memory + judgment cards +
 > model handoff + compression review + A→B portability diff** in one command —
 > structure only, no content.
 > No third-party judgments, no private memories, no hidden behavior.
 
-> **Renamed:** `dsh-self` → `dsh-memory-scaffold` (v0.2.0) → **`qing-self`** (v0.3.0). The CLI binary is still `dsh-self`; slash commands, agent tools, `.dsh-self/` paths and format schemas are unchanged.
+> **Renamed:** `dsh-self` → `dsh-memory-scaffold` (v0.2.0) → `qing-self` (v0.3.0) → **`same-me`** (v0.5.0). The CLI binary is still `dsh-self`; slash commands, agent tools, `.dsh-self/` paths and format schemas are unchanged.
 
 - Zero dependencies, no network, no LLM calls, no embeddings
 - Plain markdown + JSON that any editor can read, diff and migrate
@@ -24,7 +24,7 @@ Restart DSH when prompted, then run `/self-init` in a workspace.
 
 **What it does:** gives a DSH agent a structure that survives model/session swaps — layered memory files, judgment cards, a full handoff package with 8 verification questions and a 6–10 KB compact mode, and a two-question ruler for transferability and recoverability. **Structure only, not a memory engine:** it does not capture chats, embed, retrieve or call a model.
 
-![qing-self overview](assets/screenshots/01-overview.png)
+![same-me overview](assets/screenshots/01-overview.png)
 
 ---
 
@@ -97,7 +97,7 @@ write any memory file — the judgment stays yours (or the AI you paste it into)
    never overwrite user files — `review` reports drift and the user merges.
 3. **Ecosystem hook (we are the hub)**: the `--json` envelope on all eight
    commands, the handoff JSON sidecar, importable format parsers
-   (`qing-self/format`) and `docs/ECOSYSTEM.md`. Other plugins (session-start
+   (`same-me/format`) and `docs/ECOSYSTEM.md`. Other plugins (session-start
    pointer, compaction gate, handoff consumer, panels, dashboards) can read
    without copying the implementation.
 4. **Content-free**: structure and process templates only. That keeps it honest
@@ -111,7 +111,7 @@ write any memory file — the judgment stays yours (or the AI you paste it into)
 ```sh
 dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
 # or the prebuilt tarball from the v0.3.0 release:
-npm install -g qing-self@0.4.0   # 或 dsh plugin --profile <profile> add ./；见方式 C
+npm install -g same-me@0.5.0   # 或 dsh plugin --profile <profile> add ./；见方式 C
 # or clone and point at the directory:
 #   git clone https://github.com/deepseekqing/same-me
 #   dsh plugin --profile <your profile> add ./dsh-self
@@ -221,7 +221,7 @@ Row config (the bundle patch's `config`; users can override it):
 - `handoff` writes a `.md` package plus a `.json` sidecar
   (`schema: "dsh-self/handoff"`)
 - Node consumers can
-  `import { parseJudgmentsTable, parseCards, hotStats } from 'qing-self/format'`
+  `import { parseJudgmentsTable, parseCards, hotStats } from 'same-me/format'`
 - File-only consumers follow the locked markdown format in `docs/FORMAT.md`
 - Integration recipes (session-start pointer, compaction gate, handoff consumer,
   dashboards) are in `docs/ECOSYSTEM.md` §6

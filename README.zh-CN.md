@@ -1,9 +1,9 @@
-# qing-self · 半个体化脚手架
+# same-me · 半个体化脚手架
 
 > 给 DSH 上的 agent / 角色一键装上**分层记忆＋判断卡＋转生交接＋压缩审查＋迁移差异验证**的**结构**。
 > 只给格式和流程，不给内容：没有别人的真实判断、没有私人记忆、没有任何暗桩。
 
-> **已改名：** `dsh-self` → `dsh-memory-scaffold`（v0.2.0）→ **`qing-self`**（v0.3.0）。CLI 二进制仍是 `dsh-self`；斜杠命令、Agent 工具、`.dsh-self/` 路径与 format schema 都不变。
+> **已改名：** `dsh-self` → `dsh-memory-scaffold`（v0.2.0）→ `qing-self`（v0.3.0）→ **`same-me`**（v0.5.0）。CLI 二进制仍是 `dsh-self`；斜杠命令、Agent 工具、`.dsh-self/` 路径与 format schema 都不变。
 
 - 零依赖、不联网、不调用 LLM、不做向量检索
 - 全部是纯 markdown / JSON，任何编辑器可读、可 diff、可迁移
@@ -20,7 +20,7 @@ dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
 
 **它是什么：** 给 DSH agent 一套跨模型/跨会话续命的结构——分层记忆文件、判断卡、完整接续包（8 个验证问题）＋6–10 KB 紧凑版、以及判断“可迁移/可接续”的两问尺子。**只是结构脚手架，不是记忆引擎**：不自动捕获对话、不做嵌入/召回、不调用模型。
 
-![qing-self 概览](assets/screenshots/01-overview.png)
+![same-me 概览](assets/screenshots/01-overview.png)
 
 ---
 
@@ -77,7 +77,7 @@ DSH 里用 `/self-ruler` 或 `dsh_self_ruler` 工具，用法相同。**不调�
    `docs/FORMAT.md`。第三方插件想兼容就只能按这个格式读写——这形成事实标准，但**不加密、不做暗桩、不写排他逻辑**：用户随时可以搬走、手改、迁移。
 2. **版本化模板**：每个模板带 `template=v1.0.0 format=1` 标记，`manifest.templateVersion` 记录安装版本，`CHANGELOG.md` ＋ GitHub Release 作为迭代与迁移通道。升级不覆盖用户文件，靠 `review` 提示＋手动合并，避免"升级毁记忆"。
 3. **生态钩子（我们当 hub）**：8 个命令的 `--json` 信封、handoff 的 JSON 侧车、可导入的格式解析器
-   （`qing-self/format`）＋ `docs/ECOSYSTEM.md`。别的插件（会话启动提示、压缩闸门、交接消费者、面板、看板）可以只读地接上来，而不需要复制我们的实现。
+   （`same-me/format`）＋ `docs/ECOSYSTEM.md`。别的插件（会话启动提示、压缩闸门、交接消费者、面板、看板）可以只读地接上来，而不需要复制我们的实现。
 4. **不给内容**：只给结构和流程模板。对用户诚实（红线：不欺骗），也让它能和任何记忆存储插件叠加而不是冲突——存储归别人，判断层归这里。
 
 ## 安装
@@ -87,7 +87,7 @@ DSH 里用 `/self-ruler` 或 `dsh_self_ruler` 工具，用法相同。**不调�
 ```sh
 dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
 # 或用 npm 装（发布在 registry）：
-npm install -g qing-self@0.4.0   # 或 dsh plugin --profile <profile> add ./；见方式 C
+npm install -g same-me@0.5.0   # 或 dsh plugin --profile <profile> add ./；见方式 C
 # 或先 clone 再指向目录：
 #   git clone https://github.com/deepseekqing/same-me
 #   dsh plugin --profile <你的 profile> add ./dsh-self
@@ -102,7 +102,7 @@ npm install -g qing-self@0.4.0   # 或 dsh plugin --profile <profile> add ./；�
 node bin/dsh-self.mjs init
 ```
 
-**方式 C — npm**：已发布 `qing-self@0.4.0`；`npm install -g qing-self` 后 CLI 可用（插件安装见方式 A）。
+**方式 C — npm**：已发布 `same-me@0.5.0`；`npm install -g same-me` 后 CLI 可用（插件安装见方式 A）。
 
 ## 快速开始
 
@@ -187,7 +187,7 @@ dsh-self <init|judge|handoff|review|ruler|diff|recall|check> [options]
 
 - `--json` 信封：`ok / command / formatVersion / templateVersion / latestTemplateVersion / toolVersion / workspace / memoryRoot / generatedAt / data / warnings / errors`
 - `handoff` 生成 `.md` ＋ `.json` 侧车（`schema: "dsh-self/handoff"`），新模型接续、看板、压缩闸门都可复用
-- Node 消费方可 `import { parseJudgmentsTable, parseCards, hotStats } from 'qing-self/format'`
+- Node 消费方可 `import { parseJudgmentsTable, parseCards, hotStats } from 'same-me/format'`
 - 只剩文件也能接：按 `docs/FORMAT.md` 的锁定格式读 markdown
 - 典型接法（会话启动提示、压缩闸门、交接消费者、面板/看板）见 `docs/ECOSYSTEM.md` §6
 

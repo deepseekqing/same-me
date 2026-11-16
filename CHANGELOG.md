@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.0]
+
+- **改名：`qing-self` → `same-me`**（npm 包名同步改为 `same-me`；CLI 二进制仍是 `dsh-self`，另加 `same-me` 别名）。
+- 仓库迁到 `https://github.com/deepseekqing/same-me`（旧账号注销，旧链接失效）。
+- 数据格式（FORMAT_VERSION 1）、目录布局、斜杠命令、Agent 工具名全部不变。
+
 ## [0.4.0]
 
 - **New command `diff`**: compare two score JSON files (`{"total":…,"items":[{name,score,weight}]}`) and report total delta/difference rate, per-item difference rate (`|b−a|/weight×100`), focused loss, and the A→B direction. Direction is asymmetric; run with A/B swapped for the reverse. Read-only, no model calls.

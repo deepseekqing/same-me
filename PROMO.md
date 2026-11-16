@@ -1,12 +1,12 @@
-﻿# qing-self · 推广文案
+﻿# same-me · 推广文案
 
 ## 中文（可复制发布）
 
-**qing-self（CLI 仍叫 dsh-self）：给你的 DSH agent 一个能跨模型延续的自我**
+**same-me（CLI 仍叫 dsh-self）：给你的 DSH agent 一个能跨模型延续的自我**
 
 AI 的记忆问题不是"记不住"，是**换个模型它就不是它了**。
 
-qing-self 只做五件事：
+same-me 只做五件事：
 - **四层记忆**：状态、索引、判断库、判断卡
 - **判断卡**：结论不是重点——为什么、失败在哪、还有什么没想通
 - **交接包**：换模型前跑一次，新模型答 8 个验证问题才算接上
@@ -24,11 +24,11 @@ dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
 
 ## English (paste-ready)
 
-**qing-self (the CLI is still `dsh-self`): give your DSH agent a self that survives model swaps**
+**same-me (the CLI is still `dsh-self`): give your DSH agent a self that survives model swaps**
 
 The problem with AI memory isn't recall — it's that **after a model swap, it's no longer *it*.**
 
-qing-self ships five small things:
+same-me ships five small things:
 - **Four layers**: state, index, judgments, judgment cards
 - **Judgment cards**: the conclusion is cheap — why it holds, where it fails, what's still unresolved
 - **Handoff package**: run it before switching models; the new one answers 8 verification questions

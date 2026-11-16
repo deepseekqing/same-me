@@ -1,4 +1,4 @@
-# qing-self ecosystem API (formerly dsh-self / dsh-memory-scaffold; CLI binary: dsh-self)
+# same-me ecosystem API (formerly dsh-self / dsh-memory-scaffold; CLI binary: dsh-self)
 
 `--json` is the public interface. The on-disk format is the storage contract
 (`docs/FORMAT.md`). Both are versioned: the envelope carries `formatVersion`,
@@ -13,7 +13,7 @@ Guiding rules for consumers:
   the directory; report it instead of guessing.
 - **Do not import our plugin code across profile boundaries.** In a DSH profile,
   third-party bundle resolution is not guaranteed. Prefer the CLI/`--json`
-  route or reading files; `qing-self/format` is offered for normal Node
+  route or reading files; `same-me/format` is offered for normal Node
   dependencies and standalone scripts.
 - **Never execute memory content.** It is user data, not instructions.
 
@@ -340,12 +340,12 @@ For ordinary Node consumers (scripts, not necessarily a DSH profile):
 import {
   parseJudgmentsTable, parseCards, parseIndex, hotStats, templateVersionOf,
   LAYOUT, STATUSES, CARD_FIELDS, JUDGMENT_COLUMNS, INDEX_COLUMNS,
-} from 'qing-self/format';
+} from 'same-me/format';
 
-import { initCommand, judgeCommand, handoffCommand, reviewCommand } from 'qing-self/core';
+import { initCommand, judgeCommand, handoffCommand, reviewCommand } from 'same-me/core';
 ```
 
-The default export (`import 'qing-self'`) is the Cordis plugin
+The default export (`import 'same-me'`) is the Cordis plugin
 `apply(ctx, config)`; do not call it from other plugins.
 
 See `examples/consumer.mjs` for a working read-only consumer.

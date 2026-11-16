@@ -1,8 +1,8 @@
-# qing-self — installable DSH bundle patch (row id kept as dsh-self for stable overrides).
+# same-me — installable DSH bundle patch (row id kept as dsh-self for stable overrides).
 # The row id is stable; user overrides should target it by id.
 - insert:
     - id: dsh-self
-      name: 'qing-self'
+      name: 'same-me'
       config:
         memoryDir: memory
         hotMaxChars: 800
