@@ -109,9 +109,9 @@ write any memory file — the judgment stays yours (or the AI you paste it into)
 **A — install from the repository (recommended; slash commands + agent tools)**
 
 ```sh
-dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
-# or the prebuilt tarball from the v0.3.0 release:
-npm install -g same-me@0.5.0   # 或 dsh plugin --profile <profile> add ./；见方式 C
+dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.5.0
+# or the prebuilt tarball from the v0.5.0 release:
+dsh plugin --profile web add https://github.com/deepseekqing/same-me/releases/download/v0.5.0/same-me-0.5.0.tgz
 # or clone and point at the directory:
 #   git clone https://github.com/deepseekqing/same-me
 #   dsh plugin --profile <your profile> add ./dsh-self

@@ -85,9 +85,9 @@ DSH 里用 `/self-ruler` 或 `dsh_self_ruler` 工具，用法相同。**不调�
 **方式 A — 从仓库安装（推荐，含斜杠命令＋Agent 工具）**
 
 ```sh
-dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
-# 或用 npm 装（发布在 registry）：
-npm install -g same-me@0.5.0   # 或 dsh plugin --profile <profile> add ./；见方式 C
+dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.5.0
+# 或用 v0.5.0 Release 里的预构建 tarball：
+dsh plugin --profile web add https://github.com/deepseekqing/same-me/releases/download/v0.5.0/same-me-0.5.0.tgz
 # 或先 clone 再指向目录：
 #   git clone https://github.com/deepseekqing/same-me
 #   dsh plugin --profile <你的 profile> add ./dsh-self
@@ -102,7 +102,7 @@ npm install -g same-me@0.5.0   # 或 dsh plugin --profile <profile> add ./；见
 node bin/dsh-self.mjs init
 ```
 
-**方式 C — npm**：已发布 `same-me@0.5.0`；`npm install -g same-me` 后 CLI 可用（插件安装见方式 A）。
+**方式 C — npm**：暂未发布（先别用 npm 装）；请用方式 A 的 git+ 或 Release tarball。
 
 ## 快速开始
 
