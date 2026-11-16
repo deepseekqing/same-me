@@ -25,7 +25,7 @@
   `/self-ruler`), agent tools (`dsh_self_*`), `.dsh-self/` directory, template
   markers and format schemas (`dsh-self/memory`, `dsh-self/handoff`) are kept as-is.
 - README/docs/install commands now use the new repository and tag `v0.2.0`;
-  GitHub redirects the old URLs. Install: `dsh plugin --profile web add git+https://github.com/malabananclauss-rgb/dsh-memory-scaffold#v0.2.0`.
+  旧账号已注销、旧链接不再跳转（2026-11-16 起）。历史安装命令： `dsh plugin --profile web add git+https://github.com/malabananclauss-rgb/dsh-memory-scaffold#v0.2.0`.
 - This release rolls up the unreleased 0.1.7 ruler work (unique two-question ruler:
   transferability × continuability) and the 0.1.6 compact handoff / `--focus` work.
 

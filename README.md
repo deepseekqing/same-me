@@ -17,7 +17,7 @@
 ## Install in 30 seconds
 
 ```sh
-dsh plugin --profile web add git+https://github.com/malabananclauss-rgb/qing-self#v0.3.0
+dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
 ```
 
 Restart DSH when prompted, then run `/self-init` in a workspace.
@@ -109,11 +109,11 @@ write any memory file — the judgment stays yours (or the AI you paste it into)
 **A — install from the repository (recommended; slash commands + agent tools)**
 
 ```sh
-dsh plugin --profile web add git+https://github.com/malabananclauss-rgb/qing-self#v0.3.0
+dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
 # or the prebuilt tarball from the v0.3.0 release:
-dsh plugin --profile web add https://github.com/malabananclauss-rgb/qing-self/releases/download/v0.3.0/qing-self-0.3.0.tgz
+npm install -g qing-self@0.4.0   # 或 dsh plugin --profile <profile> add ./；见方式 C
 # or clone and point at the directory:
-#   git clone https://github.com/malabananclauss-rgb/qing-self
+#   git clone https://github.com/deepseekqing/same-me
 #   dsh plugin --profile <your profile> add ./dsh-self
 # or install the local directory from the Web Plugins page / plugin_manager install_bundle
 ```

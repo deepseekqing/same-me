@@ -15,10 +15,10 @@ qing-self 只做五件事：
 零依赖、纯 markdown/JSON、不加密、不锁人，数据随时能搬走。
 
 ```sh
-dsh plugin --profile web add git+https://github.com/malabananclauss-rgb/qing-self#v0.3.0
+dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
 ```
 
-仓库：https://github.com/malabananclauss-rgb/qing-self
+仓库：https://github.com/deepseekqing/same-me
 
 ---
 
@@ -38,10 +38,10 @@ qing-self ships five small things:
 Zero dependencies, plain markdown/JSON, no encryption, no lock-in — your data moves with you.
 
 ```sh
-dsh plugin --profile web add git+https://github.com/malabananclauss-rgb/qing-self#v0.3.0
+dsh plugin --profile web add git+https://github.com/deepseekqing/same-me#v0.3.0
 ```
 
-Repo: https://github.com/malabananclauss-rgb/qing-self
+Repo: https://github.com/deepseekqing/same-me
 
 ---
 
